@@ -1,0 +1,13 @@
+8583  execve("./test1", ["./test1"], [/* 60 vars */]) = 0       启动firstapp
+8583  brk(0)                            = 0x91ec000  调用brk向内核申请空间
+8583  access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+    检验/etc/ld.so.nohwcap文件是否存在
+8583  mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb772b000
+调用mmap2函数使得进程之间通过映射同一个普通文件实现共享内存，调用进程地址8192字节的内存空间
+8583  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+8583  open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+调用open函数打开/etc/ld.so.cache文件，返回文件描述符为3 
+8583  fstat64(3, {st_mode=S_IFREG|0644, st_size=78817, ...}) = 0
+    调用fstat64函数获取/etc/ld.so.cache文件信息
+8583  mmap2(NULL, 78817, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7717000
+8583  close(3)
