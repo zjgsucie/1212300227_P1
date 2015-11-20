@@ -1,0 +1,199 @@
+8583  execve("./test1", ["./test1"], [/* 60 vars */]) = 0
+8583  brk(0)                            = 0x91ec000
+8583  access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+8583  mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb772b000
+8583  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+8583  open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+8583  fstat64(3, {st_mode=S_IFREG|0644, st_size=78817, ...}) = 0
+8583  mmap2(NULL, 78817, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7717000
+8583  close(3)                          = 0
+8583  access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+8583  open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+8583  read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+8583  fstat64(3, {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+8583  mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7569000
+8583  mmap2(0xb7711000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000) = 0xb7711000
+8583  mmap2(0xb7714000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7714000
+8583  close(3)                          = 0
+8583  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7568000
+8583  set_thread_area({entry_number:-1 -> 6, base_addr:0xb7568940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+8583  mprotect(0xb7711000, 8192, PROT_READ) = 0
+8583  mprotect(0x8049000, 4096, PROT_READ) = 0
+8583  mprotect(0xb7751000, 4096, PROT_READ) = 0
+8583  munmap(0xb7717000, 78817)         = 0
+8583  fstat64(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 14), ...}) = 0
+8583  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb772a000
+8583  fstat64(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 14), ...}) = 0
+8583  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7729000
+8583  write(1, "hello world,this is linux!>", 27) = 27
+8583  read(0, "\n", 1024)               = 1
+8583  clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75689a8) = 8584
+8583  wait4(-1,  <unfinished ...>
+8584  execve("/usr/local/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8584  execve("/usr/local/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8584  execve("/usr/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8584  execve("/usr/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8584  execve("/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8584  execve("/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8584  execve("/usr/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8584  execve("/usr/local/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8584  dup(2)                            = 3
+8584  fcntl64(3, F_GETFL)               = 0x2 (flags O_RDWR)
+8584  brk(0)                            = 0x91ec000
+8584  brk(0x920d000)                    = 0x920d000
+8584  fstat64(3, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 14), ...}) = 0
+8584  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7728000
+8584  _llseek(3, 0, 0xbf825400, SEEK_CUR) = -1 ESPIPE (Illegal seek)
+8584  write(3, "\n", 1)                 = 1
+8584  write(3, ": No such file or directory\n", 28) = 28
+8584  close(3)                          = 0
+8584  munmap(0xb7728000, 4096)          = 0
+8584  exit_group(2)                     = ?
+8584  +++ exited with 2 +++
+8583  <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 2}], 0, NULL) = 8584
+8583  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8584, si_status=2, si_utime=0, si_stime=0} ---
+8583  write(1, "child process return 512\n", 25) = 25
+8583  write(1, ">", 1)                  = 1
+8583  read(0, "\n", 1024)               = 1
+8583  clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75689a8) = 8585
+8583  wait4(-1,  <unfinished ...>
+8585  execve("/usr/local/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8585  execve("/usr/local/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8585  execve("/usr/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8585  execve("/usr/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8585  execve("/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8585  execve("/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8585  execve("/usr/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8585  execve("/usr/local/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8585  dup(2)                            = 3
+8585  fcntl64(3, F_GETFL)               = 0x2 (flags O_RDWR)
+8585  brk(0)                            = 0x91ec000
+8585  brk(0x920d000)                    = 0x920d000
+8585  fstat64(3, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 14), ...}) = 0
+8585  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7728000
+8585  _llseek(3, 0, 0xbf825400, SEEK_CUR) = -1 ESPIPE (Illegal seek)
+8585  write(3, "\n", 1)                 = 1
+8585  write(3, ": No such file or directory\n", 28) = 28
+8585  close(3)                          = 0
+8585  munmap(0xb7728000, 4096)          = 0
+8585  exit_group(2)                     = ?
+8585  +++ exited with 2 +++
+8583  <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 2}], 0, NULL) = 8585
+8583  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8585, si_status=2, si_utime=0, si_stime=0} ---
+8583  write(1, "child process return 512\n", 25) = 25
+8583  write(1, ">", 1)                  = 1
+8583  read(0, "\n", 1024)               = 1
+8583  clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75689a8) = 8586
+8583  wait4(-1,  <unfinished ...>
+8586  execve("/usr/local/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8586  execve("/usr/local/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8586  execve("/usr/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8586  execve("/usr/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8586  execve("/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8586  execve("/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8586  execve("/usr/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8586  execve("/usr/local/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8586  dup(2)                            = 3
+8586  fcntl64(3, F_GETFL)               = 0x2 (flags O_RDWR)
+8586  brk(0)                            = 0x91ec000
+8586  brk(0x920d000)                    = 0x920d000
+8586  fstat64(3, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 14), ...}) = 0
+8586  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7728000
+8586  _llseek(3, 0, 0xbf825400, SEEK_CUR) = -1 ESPIPE (Illegal seek)
+8586  write(3, "\n", 1)                 = 1
+8586  write(3, ": No such file or directory\n", 28) = 28
+8586  close(3)                          = 0
+8586  munmap(0xb7728000, 4096)          = 0
+8586  exit_group(2)                     = ?
+8586  +++ exited with 2 +++
+8583  <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 2}], 0, NULL) = 8586
+8583  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8586, si_status=2, si_utime=0, si_stime=1} ---
+8583  write(1, "child process return 512\n", 25) = 25
+8583  write(1, ">", 1)                  = 1
+8583  read(0, "\n", 1024)               = 1
+8583  clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75689a8) = 8587
+8583  wait4(-1,  <unfinished ...>
+8587  execve("/usr/local/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8587  execve("/usr/local/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8587  execve("/usr/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8587  execve("/usr/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8587  execve("/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8587  execve("/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8587  execve("/usr/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8587  execve("/usr/local/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8587  dup(2)                            = 3
+8587  fcntl64(3, F_GETFL)               = 0x2 (flags O_RDWR)
+8587  brk(0)                            = 0x91ec000
+8587  brk(0x920d000)                    = 0x920d000
+8587  fstat64(3, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 14), ...}) = 0
+8587  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7728000
+8587  _llseek(3, 0, 0xbf825400, SEEK_CUR) = -1 ESPIPE (Illegal seek)
+8587  write(3, "\n", 1)                 = 1
+8587  write(3, ": No such file or directory\n", 28) = 28
+8587  close(3)                          = 0
+8587  munmap(0xb7728000, 4096)          = 0
+8587  exit_group(2)                     = ?
+8587  +++ exited with 2 +++
+8583  <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 2}], 0, NULL) = 8587
+8583  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8587, si_status=2, si_utime=0, si_stime=0} ---
+8583  write(1, "child process return 512\n", 25) = 25
+8583  write(1, ">", 1)                  = 1
+8583  read(0, "\n", 1024)               = 1
+8583  clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75689a8) = 8588
+8583  wait4(-1,  <unfinished ...>
+8588  execve("/usr/local/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8588  execve("/usr/local/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8588  execve("/usr/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8588  execve("/usr/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8588  execve("/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8588  execve("/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8588  execve("/usr/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8588  execve("/usr/local/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8588  dup(2)                            = 3
+8588  fcntl64(3, F_GETFL)               = 0x2 (flags O_RDWR)
+8588  brk(0)                            = 0x91ec000
+8588  brk(0x920d000)                    = 0x920d000
+8588  fstat64(3, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 14), ...}) = 0
+8588  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7728000
+8588  _llseek(3, 0, 0xbf825400, SEEK_CUR) = -1 ESPIPE (Illegal seek)
+8588  write(3, "\n", 1)                 = 1
+8588  write(3, ": No such file or directory\n", 28) = 28
+8588  close(3)                          = 0
+8588  munmap(0xb7728000, 4096)          = 0
+8588  exit_group(2)                     = ?
+8588  +++ exited with 2 +++
+8583  <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 2}], 0, NULL) = 8588
+8583  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8588, si_status=2, si_utime=0, si_stime=0} ---
+8583  write(1, "child process return 512\n", 25) = 25
+8583  write(1, ">", 1)                  = 1
+8583  read(0, "\n", 1024)               = 1
+8583  clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75689a8) = 8589
+8583  wait4(-1,  <unfinished ...>
+8589  execve("/usr/local/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8589  execve("/usr/local/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8589  execve("/usr/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8589  execve("/usr/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8589  execve("/sbin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8589  execve("/bin/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8589  execve("/usr/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8589  execve("/usr/local/games/\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+8589  dup(2)                            = 3
+8589  fcntl64(3, F_GETFL)               = 0x2 (flags O_RDWR)
+8589  brk(0)                            = 0x91ec000
+8589  brk(0x920d000)                    = 0x920d000
+8589  fstat64(3, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 14), ...}) = 0
+8589  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7728000
+8589  _llseek(3, 0, 0xbf825400, SEEK_CUR) = -1 ESPIPE (Illegal seek)
+8589  write(3, "\n", 1)                 = 1
+8589  write(3, ": No such file or directory\n", 28) = 28
+8589  close(3)                          = 0
+8589  munmap(0xb7728000, 4096)          = 0
+8589  exit_group(2)                     = ?
+8589  +++ exited with 2 +++
+8583  <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 2}], 0, NULL) = 8589
+8583  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8589, si_status=2, si_utime=0, si_stime=0} ---
+8583  write(1, "child process return 512\n", 25) = 25
+8583  write(1, ">", 1)                  = 1
+8583  read(0, 0xb7729000, 1024)         = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+8583  --- SIGHUP {si_signo=SIGHUP, si_code=SI_USER, si_pid=8555, si_uid=1000} ---
+8583  +++ killed by SIGHUP +++
